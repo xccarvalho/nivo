@@ -22,3 +22,24 @@ Some components use dependencies, to install:
 
 To Select Component install:
 => pnpm i @radix-ui/react-select
+
+To Pagination use: React Router DOM
+=> pnpm i react-router-dom localforage match-sorter sort-by
+
+After create a server.json file with fake data, to instal json server:
+=> pnpm i json-server -D
+And now create a script to execute the server in the package.json > "scripts" :
+=> "server": "json-server server.json --watch --port 3333"
+-Syntax "<scriptName> <filePath> < --watch is to observe all the time > < --port is to set a port to execute >"
+Finally to execute the server:
+=> pnpm run server
+
+To manipulate the pagination at url directly put:
+
+<!-- ?_page=1&_per_page=5 -->
+<!-- => http://localhost:3333/tags?_page=1&_per_page=5 -->
+
+It was commented because it add a invert bar in the middle of the url like this: page=1&\_per_page=25
+
+To consume API use ReactQuery, to install:
+=> pnpm i @tanstack/react-query
